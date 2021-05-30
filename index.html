@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Book Shop</title>
+</head>
+
+<body onload="onInit()">
+    <h1>Book Shop</h1>
+    <div>
+        <button class="add-book" onclick="onAddBook()">Add book</button>
+    </div>
+    <div class="books-container"></div>
+    <section class="modal" hidden>
+        <h2></h2>
+        <h3></h3>
+        <h4></h4>
+        <div class="book-img"></div>
+        <p></p>
+        <div>Rate<select onchange="onRateBook(this.value)">
+                <option> ⭐</option>
+                <option>⭐⭐</option>
+                <option>⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐⭐</option>
+            </select></div>
+
+        <button onclick="onCloseModal()">Close</button>
+    </section>
+
+    <script src="js/storage-service.js"></script>
+    <script src="js/util-service.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/book-service.js"></script>
+</body>
+
+</html>
